@@ -20,12 +20,30 @@ d3 = [{"name": "reddy3", "email": "lokaraghavareddy@outlook3.com"},
       {"name": "reddy4", "email": "lokaraghavareddy@outlook4.com"}
       ]
 # creating the database
-db1 = client['mongotest']
+database = client['mongotest']
 # creating the collection
-col1 = db1['test']
+# col1 = db1['test']
+collection = database['test2']
 
 # Adding the single document
-col1.insert_one(d2)
+# collection.insert_one(d2)
 
 # Adding the many documents
-col1.insert_many(d3)
+# collection.insert_many(d3)
+
+# Displaying all documents in the collection
+# records = collection.find()
+#
+# for i in records:
+#       print(i)
+
+
+# query where name is reddy1
+# records = collection.find({"name":"reddy1"})
+# for i in records:
+#       print(i)
+
+records = collection.find()
+for i in records:
+      print(i)
+
